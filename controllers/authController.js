@@ -25,7 +25,6 @@ const createSendToken = (user, statusCode, res) => {
   };
 
   if (process.env.NODE_ENV === 'production') {
-    console.log(process.env.JWT_Cookie_EXPIRES_IN);
     cookieOptions.secure = true;
   }
 
