@@ -18,9 +18,7 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
 
   const cookieOptions = {
-    maxAge: new Date(
-      Date.now() + process.env.JWT_Cookie_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
+    maxAge: process.env.JWT_Cookie_EXPIRES_IN * 24 * 60 * 60,
     httpOnly: true,
   };
 
